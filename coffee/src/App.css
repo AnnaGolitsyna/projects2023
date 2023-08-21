@@ -1,0 +1,13 @@
+.wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blueviolet;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 70%;
+  background-color: rgb(242, 232, 216);
+}

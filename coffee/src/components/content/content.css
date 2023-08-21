@@ -1,0 +1,58 @@
+.content {
+  flex: 1;
+  margin: 0 1rem;
+  padding: 1rem;
+  border: 0.05rem solid rgb(171, 169, 169, 0.5);
+  border-radius: 0.2rem;
+}
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+}
+.button {
+  border: none;
+  background-color: transparent;
+  border: 0.02rem solid rgb(206, 29, 29);
+  border-radius: 0.2rem;
+  padding: 1rem;
+  color: rgb(206, 29, 29);
+  font-size: smaller;
+  cursor: pointer;
+
+}
+
+.button:hover,
+.button:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0.4rem 1rem;
+}
+
+ .button:hover {
+  transform: translateY(-0.05rem);
+}
+
+.btn__text {
+  margin-left: 0.5rem;
+  font-weight: 700;
+}
+
+.infoGroup {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.categoryInfo {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.categoryInfo__quantity {
+  font-weight: 700;
+  font-size: large;
+}
+.categoryInfo__label {
+  font-weight: 500;
+  font-size: small;
+}
+
