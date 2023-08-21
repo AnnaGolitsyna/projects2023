@@ -5,7 +5,8 @@
   flex-direction: column;
   overflow: hidden;
   align-items: center;
-  background-color: gray;
+  background-image: url(../../styles/background/cupCoffee.png);
+  /* background-color: gray; */
   color: white;
 }
 .priceTag {
