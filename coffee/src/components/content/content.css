@@ -15,8 +15,9 @@
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
-  background-color: rgb(242, 232, 216);
-  border: 0.5rem solid red;
+  border: 0.5rem solid rgb(242, 232, 216);
+  background-image: url(../../styles/background/logo2.png);
+  background-size: cover;
 }
 
 .buttonGroup {
