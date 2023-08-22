@@ -11,7 +11,7 @@ library.add(faComment);
 const Content = () => {
   return (
     <div className="content">
-
+      <div className="logo"></div>
       <div className="buttonGroup">
         <button className="button btn__message">
           <FontAwesomeIcon icon={['far', 'comment']} />
@@ -37,7 +37,6 @@ const Content = () => {
           <span className="categoryInfo__label">Likes</span>
         </div>
       </div>
-      
     </div>
   );
 }
