@@ -3,8 +3,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(./styles/background/DreamShaper1.jpg);
- 
+  background-image: url(./styles/background/See.jpg);
+  background-size: 100%;
 }
 .card {
   display: flex;
