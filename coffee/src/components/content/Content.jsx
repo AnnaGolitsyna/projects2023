@@ -3,13 +3,13 @@ import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComment } from '@fortawesome/free-regular-svg-icons';
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
-import { followersInfo } from '../../gateway/followersInfo.js';
+import { followersInfo } from '../../gateway/followersInfo';
 
 const Content = () => {
   const [followLabel, setFollowLabel] = useState('FOLLOW');
   const [followIcon, setFollowIcon] = useState(faPlus);
 
-  const handleFollow = () => {
+  const toggleFollow = () => {
     setFollowLabel(followLabel === 'FOLLOW' ? 'unfollow' : 'FOLLOW');
     setFollowIcon(followIcon === faPlus ? faMinus : faPlus);
   };
@@ -22,21 +22,19 @@ const Content = () => {
           <FontAwesomeIcon icon={faComment} />
           <span className="btn__text">MESSAGE</span>
         </button>
-        <button className="button" onClick={handleFollow}>
+        <button className="button" onClick={toggleFollow}>
           <FontAwesomeIcon icon={followIcon} />
           <span className="btn__text">{followLabel}</span>
         </button>
       </div>
 
       <div className="infoGroup">
-        {followersInfo.map(({ amount, category }) => {
-          return (
-            <div className="categoryInfo">
-              <div className="categoryInfo__quantity">{amount}K</div>
-              <span className="categoryInfo__label">{category}</span>
-            </div>
-          );
-        })}
+        {followersInfo.map(({ amount, category }) => (
+          <div className="categoryInfo" key={category}>
+            <div className="categoryInfo__quantity">{amount}K</div>
+            <span className="categoryInfo__label">{category}</span>
+          </div>
+        ))}
       </div>
     </div>
   );
