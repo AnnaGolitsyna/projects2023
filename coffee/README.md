@@ -1,4 +1,4 @@
-# Airport project
+# 'Death wish coffee' project
 
 ### [!!! NEW Site link](https://stupendous-manatee-5ecf14.netlify.app/)
 
