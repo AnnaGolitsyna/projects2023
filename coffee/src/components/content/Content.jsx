@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComment } from '@fortawesome/free-regular-svg-icons';
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 import { followersInfo } from '../../gateway/followersInfo';
+import MessageModal from '../messageModal/MessageModal';
 
 const Content = () => {
   const [followLabel, setFollowLabel] = useState('FOLLOW');
@@ -36,6 +37,7 @@ const Content = () => {
           </div>
         ))}
       </div>
+      <MessageModal />
     </div>
   );
 };
