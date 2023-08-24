@@ -37,11 +37,9 @@
 .button:hover {
   border-color: rgba(0, 0, 0, 0.15);
   box-shadow: rgba(0, 0, 0, 0.1) 0 0.4rem 1rem;
-}
-
-.button:hover {
   transform: translateY(-0.05rem);
 }
+
 
 .btn__text {
   margin-left: 0.5rem;

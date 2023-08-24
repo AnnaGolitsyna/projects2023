@@ -11,7 +11,80 @@
 }
 
 .modal__content {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
   background-color: white;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 0.1rem;
+  border-radius: 0.5rem;
+}
+
+.modal__communication {
+  width: 100%;
+}
+
+.iconsGroup {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.icon {
+  margin: 1rem;
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  vertical-align: middle;
+}
+
+.icon:hover {
+  width: 2.1rem;
+  height: 2.1rem;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0.4rem 1rem;
+  transform: translateY(-0.05rem);
+}
+
+
+.icon_instagram {
+  border-radius: 0.5rem;
+  color: #fff;
+  background: #d6249f;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+}
+
+.icon_telegram {
+  color: #229ed9;
+}
+
+.icon_facebook {
+  color: #3b5998;
+}
+
+.icon_twitter {
+  color: #1da1f2;
+}
+
+.modal__img {
+  max-width: 20%;
+  height: auto;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.btn__close {
+  position: absolute;
+  right: 0.1rem;
+  border: none;
+  background: none;
+  padding: 0;
+  background-color: white;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0 0.5rem;
 }
