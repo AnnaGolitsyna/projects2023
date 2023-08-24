@@ -1,6 +1,7 @@
 import React from 'react';
 import { createPortal } from 'react-dom';
 import './messageModal.css';
+import '../../styles/elements/button.css';
 import pirateImage from '../../styles/background/pirate.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -17,7 +18,19 @@ const MessageModal = () => {
     <div className="modal__container">
       <div className="modal__content">
         <div className="modal__communication">
-          <form className="dilog">MessageModal</form>
+          <form className="dilogForm">
+            <p className="dilogForm__title">
+              Our manager will be happy to read your message
+            </p>
+            <input className="dilogForm__input" placeholder="your e-mail" />
+            <textarea className="dilogForm__input" placeholder="your message" />
+            <div className="buttonGroup">
+              <button className="button btn_modal btn_save">SAVE</button>
+              <button className="button btn_modal btn_canceled">
+                Canceled
+              </button>
+            </div>
+          </form>
           <div className="iconsGroup">
             <FontAwesomeIcon
               icon={faInstagram}

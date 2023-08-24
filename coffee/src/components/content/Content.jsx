@@ -1,4 +1,5 @@
 import './content.css';
+import '../../styles/elements/button.css';
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComment } from '@fortawesome/free-regular-svg-icons';

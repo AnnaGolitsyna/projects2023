@@ -1,0 +1,19 @@
+.buttonGroup {
+  display: flex;
+  justify-content: space-between;
+}
+.button {
+  border: none;
+  background-color: transparent;
+  border: 0.02rem solid rgb(206, 29, 29);
+  border-radius: 0.2rem;
+  padding: 0.5rem 0.8rem;
+  color: rgb(206, 29, 29);
+  cursor: pointer;
+}
+
+.button:hover {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 0.4rem 1rem;
+  transform: translateY(-0.05rem);
+}

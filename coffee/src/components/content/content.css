@@ -20,7 +20,7 @@
   background-size: cover;
 }
 
-.buttonGroup {
+/* .buttonGroup {
   display: flex;
   justify-content: space-between;
 }
@@ -38,7 +38,7 @@
   border-color: rgba(0, 0, 0, 0.15);
   box-shadow: rgba(0, 0, 0, 0.1) 0 0.4rem 1rem;
   transform: translateY(-0.05rem);
-}
+} */
 
 
 .btn__text {
