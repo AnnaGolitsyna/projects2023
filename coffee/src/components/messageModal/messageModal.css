@@ -14,6 +14,7 @@
   display: flex;
   position: relative;
   justify-content: space-between;
+  max-width: 40rem;
   background-color: white;
   padding: 0.1rem;
   border-radius: 0.5rem;
@@ -67,7 +68,6 @@
 
 .btn_save {
   background-color: #229ed9;
-
 }
 
 .iconsGroup {
@@ -118,7 +118,7 @@
 }
 
 .modal__img {
-  max-width: 20%;
+  max-width: 35%;
   height: auto;
   border-radius: 0 0.5rem 0.5rem 0;
 }
