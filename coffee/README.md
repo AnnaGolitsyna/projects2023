@@ -1,8 +1,11 @@
 # 'Death wish coffee' project
+Promo card for company 'Death wish coffee'
 
 ### [!!! NEW Site link](https://stupendous-manatee-5ecf14.netlify.app/)
 
-Basic functionality - promo card for company 'Death wish coffee'. Layout supports desktop versions.
+Basic functionality:
+Layout - supports tablet (768px) and desktop (1368px) versions.
+Interactivity -
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
