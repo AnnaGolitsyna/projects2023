@@ -38,7 +38,7 @@ const Content = () => {
           </div>
         ))}
       </div>
-      <MessageModal />
+      {/* <MessageModal /> */}
     </div>
   );
 };
