@@ -8,25 +8,33 @@ import { followersInfo } from '../../gateway/followersInfo';
 import MessageModal from '../messageModal/MessageModal';
 
 const Content = () => {
-  const [followLabel, setFollowLabel] = useState('FOLLOW');
-  const [followIcon, setFollowIcon] = useState(faPlus);
+  const [isOpenModal, setStatusModal] = useState(false);
+
+  const [followState, setFollowState] = useState({
+    label: 'FOLLOW',
+    icon: faPlus,
+  });
 
   const toggleFollow = () => {
-    setFollowLabel(followLabel === 'FOLLOW' ? 'unfollow' : 'FOLLOW');
-    setFollowIcon(followIcon === faPlus ? faMinus : faPlus);
+    setFollowState((prevState) => ({
+      label: prevState.label === 'FOLLOW' ? 'unfollow' : 'FOLLOW',
+      icon: prevState.icon === faPlus ? faMinus : faPlus,
+    }));
   };
+
+  const { label, icon } = followState;
 
   return (
     <div className="content">
       <div className="logo"></div>
       <div className="buttonGroup">
-        <button className="button">
+        <button className="button" onClick={() => setStatusModal(true)}>
           <FontAwesomeIcon icon={faComment} />
           <span className="btn__text">MESSAGE</span>
         </button>
         <button className="button" onClick={toggleFollow}>
-          <FontAwesomeIcon icon={followIcon} />
-          <span className="btn__text">{followLabel}</span>
+          <FontAwesomeIcon icon={icon} />
+          <span className="btn__text">{label}</span>
         </button>
       </div>
 
@@ -38,7 +46,7 @@ const Content = () => {
           </div>
         ))}
       </div>
-      {/* <MessageModal /> */}
+      {isOpenModal && <MessageModal closeModal={() => setStatusModal(false)} />}
     </div>
   );
 };

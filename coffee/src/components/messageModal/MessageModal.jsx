@@ -6,14 +6,14 @@ import pirateImage from '../../styles/background/pirate.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faInstagram,
-  faTelegram,
+  faYoutube,
   faFacebook,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 
 const modalEl = document.getElementById('modal-root');
 
-const MessageModal = () => {
+const MessageModal = ({ closeModal }) => {
   return createPortal(
     <div className="modal__container">
       <div className="modal__content">
@@ -26,23 +26,51 @@ const MessageModal = () => {
             <textarea className="dilogForm__input" placeholder="your message" />
             <div className="buttonGroup">
               <button className="button btn_modal btn_save">SAVE</button>
-              <button className="button btn_modal btn_canceled">
-                Canceled
+              <button
+                className="button btn_modal btn_canceled"
+                onClick={closeModal}
+              >
+                Cancel
               </button>
             </div>
           </form>
           <div className="iconsGroup">
-            <FontAwesomeIcon
-              icon={faInstagram}
-              className="icon icon_instagram"
-            />
-            <FontAwesomeIcon icon={faTelegram} className="icon icon_telegram" />
-            <FontAwesomeIcon icon={faFacebook} className="icon icon_facebook" />
-            <FontAwesomeIcon icon={faTwitter} className="icon icon_twitter" />
+            <a
+              href="https://www.instagram.com/deathwishcoffee/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon
+                icon={faInstagram}
+                className="icon icon_instagram"
+              />
+            </a>
+            <FontAwesomeIcon icon={faYoutube} className="icon icon_youTube" />
+
+            <a
+              href="https://www.facebook.com/deathwishcoffee"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon
+                icon={faFacebook}
+                className="icon icon_facebook"
+              />
+            </a>
+            <a
+              href="https://twitter.com/deathwishcoffee"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FontAwesomeIcon icon={faTwitter} className="icon icon_twitter" />
+            </a>
           </div>
         </div>
         <img className="modal__img" src={pirateImage} alt="pirate" />
-        <button className="btn__close"> X </button>
+        <button className="btn__close" onClick={closeModal}>
+          {' '}
+          X{' '}
+        </button>
       </div>
     </div>,
     modalEl
