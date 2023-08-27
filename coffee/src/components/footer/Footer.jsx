@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import './footer.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -19,19 +19,23 @@ const Footer = () => {
           />
           <span className="location__label">Round Lake, NY</span>
         </div>
-        <div className="location__adress">
-          <FontAwesomeIcon
-            icon={['fas', 'newspaper']}
-            className="location__icon"
-          />
-          <span className="location__label">deathwishcoffee.com</span>
-        </div>
+        <a className='location_hover'
+          href="https://www.deathwishcoffee.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div className="location__adress">
+            <FontAwesomeIcon
+              icon={['fas', 'newspaper']}
+              className="location__icon"
+            />
+            <span className="location__label">deathwishcoffee.com</span>
+          </div>
+        </a>
       </div>
       <button className="btn__buying">BUY NOW</button>
     </div>
   );
-}
+};
 
-
-
-export default Footer
+export default Footer;
