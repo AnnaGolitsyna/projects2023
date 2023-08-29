@@ -54,7 +54,7 @@
   border: 0.1rem solid #229ed9;
 }
 
-.btn_modal {
+.btn__modal {
   margin: 0.5rem 2rem;
   width: 5rem;
   font-size: 0.8rem;
@@ -70,15 +70,13 @@
   background-color: #229ed9;
 }
 
-
-
 .modal__img {
   max-width: 35%;
   height: auto;
   border-radius: 0 0.5rem 0.5rem 0;
 }
 
-.btn__close {
+.btn__close-message {
   position: absolute;
   right: 0.1rem;
   border: none;

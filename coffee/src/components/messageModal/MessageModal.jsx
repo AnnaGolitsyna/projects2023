@@ -1,9 +1,9 @@
 import React from 'react';
 import { createPortal } from 'react-dom';
-import './messageModal.css';
-import '../../styles/elements/button.css';
 import pirateImage from '../../styles/background/pirate.jpg';
 import SocialMediaBar from '../socialMediaBar/SocialMediaBar';
+import Button from '../button/Button';
+import './messageModal.css';
 
 const modalEl = document.getElementById('modal-root');
 
@@ -19,20 +19,19 @@ const MessageModal = ({ closeModal }) => {
             <input className="dilogForm__input" placeholder="your e-mail" />
             <textarea className="dilogForm__input" placeholder="your message" />
             <div className="buttonGroup">
-              <button className="button btn_modal btn_save">SAVE</button>
-              <button
-                className="button btn_modal btn_canceled"
+
+              <Button text="SAVE" className="btn__modal btn_save" />
+              <Button
+                text="Cancel"
                 onClick={closeModal}
-              >
-                Cancel
-              </button>
+                className="btn__modal btn_canceled"
+              />
             </div>
           </form>
           <SocialMediaBar />
-     
         </div>
         <img className="modal__img" src={pirateImage} alt="pirate" />
-        <button className="btn__close" onClick={closeModal}>
+        <button className="btn__close-message" onClick={closeModal}>
           {' '}
           X{' '}
         </button>

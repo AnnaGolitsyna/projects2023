@@ -1,11 +1,10 @@
-import './content.css';
-import '../../styles/elements/button.css';
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComment } from '@fortawesome/free-regular-svg-icons';
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 import { followersInfo } from '../../gateway/followersInfo';
 import MessageModal from '../messageModal/MessageModal';
+import Button from '../button/Button';
+import './content.css';
 
 const Content = () => {
   const [isOpenModal, setStatusModal] = useState(false);
@@ -22,20 +21,29 @@ const Content = () => {
     }));
   };
 
+  const handleStatusModal = () => {
+    setStatusModal(!isOpenModal);
+  };
+
   const { label, icon } = followState;
 
   return (
     <div className="content">
       <div className="logo"></div>
       <div className="buttonGroup">
-        <button className="button" onClick={() => setStatusModal(true)}>
-          <FontAwesomeIcon icon={faComment} />
-          <span className="btn__text">MESSAGE</span>
-        </button>
-        <button className="button" onClick={toggleFollow}>
-          <FontAwesomeIcon icon={icon} />
-          <span className="btn__text">{label}</span>
-        </button>
+        <Button
+          text="MESSAGE"
+          icon={faComment}
+          onClick={handleStatusModal}
+          className="btn__content"
+        />
+
+        <Button
+          text={label}
+          icon={icon}
+          onClick={toggleFollow}
+          className="btn__content"
+        />
       </div>
 
       <div className="infoGroup">
@@ -46,7 +54,7 @@ const Content = () => {
           </div>
         ))}
       </div>
-      {isOpenModal && <MessageModal closeModal={() => setStatusModal(false)} />}
+      {isOpenModal && <MessageModal closeModal={handleStatusModal} />}
     </div>
   );
 };

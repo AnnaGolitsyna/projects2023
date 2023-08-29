@@ -22,8 +22,12 @@
   background-size: cover;
 }
 
+.btn__content {
+  background-color: transparent;
+  color: rgb(206, 29, 29);
+}
+
 .btn__text {
-  margin-left: 0.5rem;
   font-size: 0.8rem;
   font-weight: 700;
 }

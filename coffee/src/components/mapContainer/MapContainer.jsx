@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { createPortal } from 'react-dom';
+import Button from '../button/Button';
 import './mapContainer.css';
 
 const mapModalEl = document.getElementById('map-root');
@@ -27,9 +28,7 @@ const MapContainer = ({ close }) => {
         />
 
         {iframeLoaded && (
-          <button className="button btn_map" onClick={close}>
-            X
-          </button>
+          <Button text="X" onClick={close} className="btn__close_map" />
         )}
       </div>
     </div>,
