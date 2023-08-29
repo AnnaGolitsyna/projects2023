@@ -3,13 +3,7 @@ import { createPortal } from 'react-dom';
 import './messageModal.css';
 import '../../styles/elements/button.css';
 import pirateImage from '../../styles/background/pirate.jpg';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faInstagram,
-  faYoutube,
-  faFacebook,
-  faTwitter,
-} from '@fortawesome/free-brands-svg-icons';
+import SocialMediaBar from '../socialMediaBar/SocialMediaBar';
 
 const modalEl = document.getElementById('modal-root');
 
@@ -34,37 +28,8 @@ const MessageModal = ({ closeModal }) => {
               </button>
             </div>
           </form>
-          <div className="iconsGroup">
-            <a
-              href="https://www.instagram.com/deathwishcoffee/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon
-                icon={faInstagram}
-                className="icon icon_instagram"
-              />
-            </a>
-            <FontAwesomeIcon icon={faYoutube} className="icon icon_youTube" />
-
-            <a
-              href="https://www.facebook.com/deathwishcoffee"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon
-                icon={faFacebook}
-                className="icon icon_facebook"
-              />
-            </a>
-            <a
-              href="https://twitter.com/deathwishcoffee"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FontAwesomeIcon icon={faTwitter} className="icon icon_twitter" />
-            </a>
-          </div>
+          <SocialMediaBar />
+     
         </div>
         <img className="modal__img" src={pirateImage} alt="pirate" />
         <button className="btn__close" onClick={closeModal}>
