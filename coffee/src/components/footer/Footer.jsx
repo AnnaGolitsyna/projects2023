@@ -10,12 +10,15 @@ const Footer = () => {
   const [showMap, setShowMap] = useState(false);
 
   const handleLocationClick = () => {
-    setShowMap(true);
+    setShowMap(!showMap);
   };
   return (
     <div className="footer">
       <div className="location">
-        <div className="location__adress" onClick={handleLocationClick}>
+        <div
+          className="location__adress location_hover"
+          onClick={handleLocationClick}
+        >
           <FontAwesomeIcon icon={faLocationDot} className="location__icon" />
           <span className="location__label">Round Lake, NY</span>
         </div>
@@ -31,7 +34,7 @@ const Footer = () => {
           </div>
         </a>
       </div>
-      {showMap && <MapContainer />}
+      {showMap && <MapContainer close={handleLocationClick} />}
       <button className="btn__buying">BUY NOW</button>
     </div>
   );

@@ -5,8 +5,6 @@
   flex-direction: column;
   overflow: hidden;
   align-items: center;
-  /* background-color: lightgray;
-  background-blend-mode: hard-light; */
   background-image: url(../../styles/background/cupCoffee.png);
   background-size: cover;
   color: white;
