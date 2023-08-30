@@ -8,7 +8,7 @@ const SocialMediaBar = () => {
     <div className="iconsGroup">
       {socMediaData.map(({ name, icon, href }) => {
         return (
-          <a href={href} target="_blank" rel="noopener noreferrer">
+          <a key={name} href={href} target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={icon} className={`icon icon_${name}`} />
           </a>
         );

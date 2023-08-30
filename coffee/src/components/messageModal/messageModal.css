@@ -24,19 +24,19 @@
   width: 100%;
 }
 
+.modal__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
 .dilogForm {
   display: flex;
   flex-direction: column;
 }
 
-.dilogForm__title {
-  text-align: center;
-  font-weight: 700;
-  font-size: 1.3rem;
-}
 
 .dilogForm__input {
-  margin: 1rem;
+  margin: 0 1rem;
   padding: 0.5rem;
   border-radius: 0.5rem;
   font-size: 1rem;
@@ -52,6 +52,11 @@
   border: 1px solid transparent;
   outline: none;
   border: 0.1rem solid #229ed9;
+}
+
+.error-message {
+  margin: 0 0 1rem 1rem;
+  color: rgb(206, 29, 29);
 }
 
 .btn__modal {
