@@ -6,12 +6,19 @@ const DialogForm = ({ register, errors, handleSubmit, closeModal }) => {
   return (
     <form
       onSubmit={handleSubmit((data) => {
-        console.log(data);
+        alert(JSON.stringify(data));
+        closeModal();
       })}
       className="dilogForm"
     >
       <input
-        {...register('eMail', { required: 'This field is required' })}
+        {...register('eMail', {
+          required: 'This field is required',
+          pattern: {
+            value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+            message: 'Invalid e-mail'
+        },
+        })}
         className="dilogForm__input"
         placeholder="your e-mail"
       />
