@@ -37,7 +37,7 @@
 }
 
 .link__buying:hover {
-  animation: color-change-2x 1s linear infinite alternate both;
+  animation: color-change-2x 1.2s linear infinite alternate both;
 }
 
 @keyframes color-change-2x {
