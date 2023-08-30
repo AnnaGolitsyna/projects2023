@@ -29,7 +29,9 @@ const Content = () => {
 
   return (
     <div className="content">
-      <div className="logo"></div>
+      <div className="logo__wrapper">
+        <div className="logo slide-in-bck-center"></div>
+      </div>
       <div className="buttonGroup">
         <Button
           text="MESSAGE"

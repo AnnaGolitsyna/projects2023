@@ -7,7 +7,7 @@
   border-radius: 0.2rem;
 }
 
-.logo {
+.logo__wrapper {
   position: absolute;
   top: -3rem;
   left: 51%;
@@ -15,11 +15,45 @@
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
-  border: 0.5rem solid rgb(242, 232, 216);
-  background-color: gray;
-  background-blend-mode: soft-light;
+  background-color: rgb(242, 232, 216);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  border-radius: 50%;
+  width: 90%;
+  height: 90%;
   background-image: url(../../styles/background/logoOrg.png);
   background-size: cover;
+}
+
+.slide-in-bck-center {
+  animation: slide-in-bck-center 2s both;
+}
+
+@keyframes slide-in-bck-center {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-0.05rem);
+  }
+  75% {
+    background-color: rgb(206, 29, 29);
+    background-blend-mode: soft-light;
+    opacity: 1;
+  }
+  100% {
+    background-color: gray;
+    background-blend-mode: soft-light;
+    opacity: 1;
+  }
 }
 
 .btn__content {
