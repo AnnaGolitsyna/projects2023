@@ -5,7 +5,6 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { faNewspaper } from '@fortawesome/free-solid-svg-icons';
 import MapContainer from '../mapContainer/MapContainer';
 
-
 const Footer = () => {
   const [showMap, setShowMap] = useState(false);
 
@@ -35,7 +34,22 @@ const Footer = () => {
         </a>
       </div>
       {showMap && <MapContainer close={handleLocationClick} />}
-      <button className="btn__buying">BUY NOW</button>
+      {/* <a
+        className="link__buying"
+        href="https://www.deathwishcoffee.com/products/death-wish-coffee"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        BUY NOW
+      </a> */}
+      <a
+      className='link__wrapper'
+        href="https://www.deathwishcoffee.com/products/death-wish-coffee"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <div className="link__buying">BUY NOW</div>
+      </a>
     </div>
   );
 };

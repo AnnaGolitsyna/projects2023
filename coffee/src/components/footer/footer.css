@@ -23,10 +23,12 @@
   color: #3b5998;
   transform: translateY(-0.05rem);
 }
-.btn__buying {
-  width: 100%;
+.link__wrapper {
+  text-decoration: none;
+  text-align: center;
+}
+.link__buying {
   padding: 2rem;
-  border: none;
   font-size: large;
   font-weight: 700;
   background-color: rgb(234, 30, 30);
@@ -34,7 +36,15 @@
   cursor: pointer;
 }
 
-.btn__buying:hover {
-  box-shadow: inset 0.1rem 0.1rem 0.5rem rgb(242, 232, 216);
-  transform: translateY(-0.03rem);
+.link__buying:hover {
+  animation: color-change-2x 1s linear infinite alternate both;
+}
+
+@keyframes color-change-2x {
+  0% {
+    background: rgb(234, 30, 30);
+  }
+  100% {
+    background: rgb(43, 1, 1);
+  }
 }
