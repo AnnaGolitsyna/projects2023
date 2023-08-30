@@ -19,10 +19,8 @@
   color: #000;
 }
 .location_hover:hover {
+  text-decoration: underline;
   color: #3b5998;
-  border-radius: 1rem;
-  border-color: rgba(0, 0, 0, 0.15);
-  box-shadow: rgba(0, 0, 0, 0.1) 0 0.4rem 1rem;
   transform: translateY(-0.05rem);
 }
 .btn__buying {
